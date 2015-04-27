@@ -1,0 +1,66 @@
+fastCCD_v1.0 is Released by Suejung Huh, Apr 2015.
+=================================================
+< How to Use >
+
+For the usage sample, please refer main() in main.cpp.
+The current implementation is only for face-vertex collisions.
+
+
+=================================================
+< Makefile Options >
+
+1) HANDLE_ROUNDING
+
+This is to make fastCCD to handle rounding error.
+We recommend to turn this option on.
+
+
+2) IGNORE_EVEN
+
+This is to ignore even-number collisions. Mainly used
+to benchmark with exactCCD.
+We recommend to turn this option off.
+
+3) _DEBUG
+
+This reports the detailed messages of each computation step.
+
+
+=================================================
+< Detailed Information >
+
+1) False Negatives
+
+False Negatives are the cases where CCD reports no collision
+for the collision case.
+We have not withnessed any false negatives so far in fastCCD.
+If found, please let us know
+contact@ohhhinc.com
+
+2) Time of Contacts
+
+fastCCD generally reports the actual collision time when a 
+collision is found. However at times, when a collision found,
+the actual collision time may not be correct 
+due to rounding error. However even such case,
+fastCCD still detect the collision.
+
+3) Number of Contacts
+
+In some special cases, given a found collision,
+the possibility of having the other collisions
+are ignored and only the original found collision is reported.
+This was our implementation choice, which can be modified based on 
+the need of user application. Note this is not a false negative.
+
+=================================================
+< BACKGROUND >
+
+fastCCD is implemented by Suejung Huh 
+to test the practicality of the idea proposed in the paper [Reference1].
+
+[Reference1]:
+Huh, S. and Lee, Y. J., and Gornowicz, G., and Henderson, R.  
+Fast and robust continuous collision detection (fastCCD).  
+DreamWorks Animation Technical Memo 2014-320. 2014.
+http://research.dreamworks.com/papers/fastccd_techreport_2014_320.pdf.
