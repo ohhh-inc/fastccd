@@ -1,9 +1,12 @@
-fastCCD_v1.0 is Released by Suejung Huh, Apr 2015.
+
+fastCCD_v1.0 is Released by Suejung Huh ( Ohhh! Inc. ) 
+and Young-ju Lee (Texas State Univ), Apr 2015.
+
 =================================================
 < How to Use >
 
 For the usage sample, please refer main() in main.cpp.
-The current implementation is only for face-vertex collisions.
+The current implementation is only for FACE-VERTEX collisions.
 
 
 =================================================

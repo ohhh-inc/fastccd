@@ -1,5 +1,5 @@
 // 
-// Released by Suejung Huh 2015
+// Released by Suejung Huh and Young Ju Lee 2015
 //
 
 #include <stdio.h>      /* printf, NULL */
